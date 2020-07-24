@@ -1,0 +1,36 @@
+Read Me
+
+The api contains a Beer Rating API and another API to get all the ratings based on a name.
+
+There are two projects. One is the BeerApp which hast he apis and the second is the BeerApiTests which consists of the unit test cases.
+
+Please run the BeerApp project and you should see a url https://localhost:{port}/api/BeerRating
+
+Task 1: 
+To post a user rating for the beer based on id, it was important to use PUT service since the ratings are added based on an id.
+
+Please use a tool like PostMan to test this service. The url is https://localhost:{port}/api/BeerRating/AddRating/{id}
+ANd in the Body parameters select Raw -> JSON and put in a sample input like below
+
+{
+    "username": "user@test.com",
+    "rating": 4,
+    "comments": "none"
+}
+
+This should add the ratings to a json file in BeerRatingApi folder.
+
+
+Task 2: 
+It's a GET service to return the details of Beer based on the name. This can be done either in PostMan or trhough browser directly. 
+https://localhost:{port}/api/BeerRating/GetBeerDetailsByName/{name}. 
+It should return a json array of Beer details like Id, Name, Description and the user ratings. 
+
+
+Task 3: 
+This is part of the UserRating class file. The validation filter is used above the user name to validate the email address field.
+ [RegularExpression(regex, reaso)]
+ 
+ 
+Task 4: 
+BeerApiTests has the unit test cases.
